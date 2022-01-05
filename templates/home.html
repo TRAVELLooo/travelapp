@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2><center>Welcome to Travello home page</center></h2>
+<h3 style="text-align:center;"> Hi {{name}} Welcome to {{place}} </h3>
+<hr>
+<form action="add" method="post">
+    {% csrf_token %}
+    Number1 : <input type="text" name="num1"><hr>
+    Number2 : <input type="text" name="num2"><hr>
+    <input type="submit" value="SUBMIT">
+</form>
+{%  endblock %}
